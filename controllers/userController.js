@@ -32,23 +32,23 @@ const getUsers = async (req, res) => {
   }
 };
 
-// const getProduct = async (req, res) => {
-//   try {
-//     const Product = await Product.find();
+const getProduct = async (req, res) => {
+  try {
+    const Product = await Product.find();
 
-//     res.status(200).json({
-//       message: "Product Fetched Successfully",
-//       users,
-//     });
-//   } catch (error) {
-//     res.status(500).json({
-//       message: error.message,
-//     });
-//   }
-// };
+    res.status(200).json({
+      message: "Product Fetched Successfully",
+      Product,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
 
 module.exports = {
   registerUser,
   getUsers,
-  // getProduct
+  getProduct
 };
